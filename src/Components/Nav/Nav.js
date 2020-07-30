@@ -61,7 +61,7 @@ class Nav extends React.Component{
                     <li className="header__nav__bar__list__item"><a href="/about">About</a></li>
                     <li className="header__nav__bar__list__item"><a href="/locations">Location</a></li>
                     <li className="header__nav__bar__list__item"><a href="/Careers">Careers</a></li>
-                    <Button nav={true} text={'Get Scootin'} href={'#DownloadBanner'}/>
+                    <Button nav={true} text={'Get Scootin'} href={'#DownloadBanner'} handleClick={this.handleClick}/>
                 </ul>
             </div>
         </div>

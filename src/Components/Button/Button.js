@@ -3,7 +3,9 @@ import './Button.scss';
 
 
 class Button extends React.Component{
-
+constructor(props){
+    super(props)
+}
 
 
 
@@ -16,7 +18,7 @@ class Button extends React.Component{
         }
 
         return(
-        <a className={className} href={this.props.href ? this.props.href : '#'}>{this.props.text}</a>
+        <a className={className} href={this.props.href ? this.props.href : '#'} onClick={this.props.handleClick ? this.props.handleClick : null}>{this.props.text}</a>
         )
     }
 
