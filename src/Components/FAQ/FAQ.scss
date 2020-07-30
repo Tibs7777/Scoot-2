@@ -1,0 +1,167 @@
+.FAQ{
+    text-align: center;
+    padding: 0 32px;
+    margin-bottom: 120px;
+
+    &__title{
+        font-family: 'Space Mono', monospace;
+        font-size: 32px;
+        letter-spacing: -1.43px;
+        line-height: 1em;
+        font-weight: 700;
+        color: hsl(216, 17%, 34.5%);
+        margin-bottom: 48px;
+    }
+
+    &__segment{
+        text-align: center;
+        margin-bottom: 48px;
+
+        &__title{
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: -1.07px;
+            line-height: 1.167em;
+            color: hsl(216, 17%, 34.5%);
+            margin-bottom: 32px;
+        }
+
+        &__questions{
+
+            &__question{
+                text-align: left;
+                margin-bottom: 16px;
+
+
+                &__title{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 32px 28px 24px 32px;
+                    background: hsl(214, 36.8%, 96.3%);
+                    cursor: pointer;
+
+                    &:hover{
+                        background: hsl(39, 100%, 93.7%);
+                    }
+
+                    &__text{
+                        font-family: 'Space Mono', monospace;
+                        font-weight: 700;
+                        font-size: 18px;
+                        letter-spacing: -0.8px;
+                        line-height: 1.333em;
+                        color: hsl(216, 17%, 34.5%);
+                        width: 87.25%;
+                        user-select: none;
+                        pointer-events: none;
+                    }
+    
+                    &__chevron{
+                        transition: all .3s ease-in-out;
+                        user-select: none;
+                        pointer-events: none;
+
+                        &--up{
+                            transform: rotateX(180deg);
+                        }
+    
+                    }
+
+                }
+
+                &__answer{
+                    box-sizing: border-box;
+                    font-size: 15px;
+                    line-height: 1.667em;
+                    color: hsl(216, 17%, 34.5%);
+                    background: hsl(214, 36.8%, 96.3%);
+                    padding: 0 28px 0px 32px;
+                    transition: all 0.3s ease-in-out;
+                    overflow: hidden;
+                    max-height: 0;
+                    padding-bottom: 0;
+
+                    &--open{
+                        padding-bottom: 32px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px){
+
+    .FAQ{
+        padding: 0 calc(18.06% - 95px);
+
+        &__title{
+            font-size: 48px;
+            letter-spacing: -2.14px;
+            margin-bottom: 64px;
+        }
+
+        &__segment{
+            margin-bottom: 64px;
+
+            &__title{
+                font-size: 40px;
+                letter-spacing: -1.79px;
+                line-height: 1.2em;
+            }
+
+            &__questions{
+
+                &__question{
+                    margin-bottom: 24px;
+
+
+                    &__title{
+                        padding: 32px 32px 24px 40px;
+
+
+                        &__text{
+                            font-size: 24px;
+                            letter-spacing: -1.07px;
+                            line-height: 1.167em;
+
+                        }
+
+                    }
+
+                    &__answer{
+                        padding: 0 32px 0 40px;
+
+                        &--open{
+                            padding-bottom: 32px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .FAQ{
+
+        &__segment{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            &__questions{
+                width: 65.77%;
+                &__question{
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,67 @@
+.Joblist{
+    padding: 0 32px;
+    text-align: center;
+    margin-bottom: 120px;
+
+    .Job{
+        background: hsl(214, 36.8%, 96.3%);
+        padding: 36px 32px 32px 32px;
+        margin-bottom: 16px;
+
+        &__text{
+            margin-bottom: 16px;
+
+            &__title{
+                font-family: 'Space Mono', monospace;
+                font-weight: 700;
+                font-size: 18px;
+                letter-spacing: -0.8px;
+                line-height: 1.333em;
+                color: hsl(216, 17%, 34.5%);
+                margin-bottom: 4px;
+            }
+
+            &__location{
+                font-size: 15px;
+                line-height:  1.667em;
+                color: hsl(216, 17%, 34.5%);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    .Joblist{
+        padding: 0 calc(18.06% - 95px);
+        text-align: left;
+        margin-bottom: 160px;
+
+        .Job{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 33px 48px;
+
+            &__text{
+                margin-bottom: 0;
+
+                &__title{
+                    font-size: 24px;
+                    line-height: 1.167em;
+                    letter-spacing: -1.07px;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px){
+.Joblist{
+        .Job{
+            padding: 32px 64px 32px 40px;
+            margin-bottom: 24px;
+        }
+}
+}
+

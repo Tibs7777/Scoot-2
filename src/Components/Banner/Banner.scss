@@ -1,0 +1,426 @@
+
+    
+/* DEFAULT RULES --------------------------- */
+.header{
+
+    &__banner{
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        position: relative;
+
+        &::before{
+            content: "";
+            width: 100%;
+            height: calc(100vh - 73px);
+            position: absolute;
+            background: #000;
+            top: 0;
+            left: 0;
+            opacity: 0%;
+            z-index: 2;
+            transition: opacity .5s ease-out;
+            pointer-events: none;
+            
+        }
+
+        &--open{
+            &::before{
+                opacity: 75%;
+                pointer-events: initial;
+            }
+        }
+
+        &__text{
+
+            &__title{
+                font-family: 'Space Mono', monospace;
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 1em;
+                color: #FFF;
+            }
+
+            &__paragraph{
+                font-size: 15px;
+                line-height: 1.667em;
+                color: #FFF;
+                margin: 24px 0 34px 0;
+            }
+
+        }
+
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    .header{
+
+
+        &__banner{
+            overflow: hidden;
+
+            &::before{
+                transition: none;
+            }
+
+            &__text{
+
+                &__title{
+                    font-size: 56px;
+                }
+            }
+
+            &__circles{
+                box-sizing: border-box;
+                display: block;
+                width: 62px;
+                height: 62px;
+                border: 3px solid #FFF;
+                border-radius: 50%;
+                position: absolute;
+
+                &::before{
+                    content: "";
+                    box-sizing: border-box;
+                    display: block;
+                    width: 62px;
+                    height: 62px;
+                    border: 3px solid #FFF;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -3px;
+                    right: 89px;
+                }
+
+                &::after{
+                    content: "";
+                    box-sizing: border-box;
+                    display: block;
+                    width: 62px;
+                    height: 62px;
+                    background: #FFF;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -3px;
+                    right: -89px;
+                }
+            }
+        }
+    }
+
+@media screen and (min-width: 1440px){
+
+    .header{
+
+        &__banner{
+            text-align: left;
+
+            &__text{
+                margin-left: 18.06%;
+
+
+                &__paragraph{
+                    width: 405px;
+                    margin: 40px 0;
+                }
+            }
+        }
+    }
+}
+}
+
+
+/* HOME SPECIFIC RULES --------------------------- */
+.Home{
+    .header{
+
+        &__banner{
+            background-image: url(./home-hero-mobile.jpg);
+            padding: 115px 0 179px 0;
+
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                height: 151px;
+                width: 452px;
+                background-image: url(./right-arrow.svg);
+                background-repeat: no-repeat;
+                left: -300px;
+                pointer-events: none;
+                z-index: 1;
+            }
+
+            &__text{
+                width: 82.93%;
+                display: inline-block;
+
+                &__title{
+                    letter-spacing: -2.5px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px){
+        .header{
+
+            &__banner{
+                background-image: url(./home-hero-tablet.jpg);
+                padding: 137px 0 217px 0;
+
+                &::after{
+                    left: -160px; 
+                    bottom: 30px;
+                }
+
+                &__text{
+                    width: 74.61%;
+                    max-width: 650px;
+                }
+
+                &__circles{
+                    bottom: 40px;
+                    right: 55px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1440px){
+
+
+        .header{
+
+            &__banner{
+                background-image: url(./home-hero-desktop.jpg); /**/
+                padding: 153px 0; /**/
+
+                &::after{
+                    left: initial;
+                    right: 280px;
+                    bottom: 155px;
+                }
+    
+                &::before{
+                    width: 203px;
+                    height: 15px;
+                    background: initial;
+                    background-image: url(./line.svg);
+                    opacity: 100%;
+                    transition: none;
+                    top: 350px;
+                }
+
+                &__text{
+                    width: 500px;
+
+                    &__title{
+                        transform: translateX(-95px);
+                    }
+                }
+
+                &__circles{
+                    bottom: 165px;
+                    right: 38px;
+                }
+            }
+
+        }
+    }
+
+}
+
+
+
+/* OTHER PAGE SPECIFIC RULES --------------------------- */
+.About{
+
+    .header{
+
+        &__banner{
+            background-image: url(./about-hero-mobile.jpg);
+            padding: 60px 0;
+
+            &__text{
+
+                &__title{
+                    letter-spacing: -1.79px;
+                }
+
+                &__paragraph{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px){
+
+        .header{
+
+          &__banner{
+            background-image: url(./about-hero-tablet.jpg);
+            text-align: left;
+            padding: 72px 0;
+
+
+
+            &__text{
+                margin-left: 18.06%;
+                transform: translateX(-95px);
+
+                &__title{
+                    letter-spacing: -2.5px;
+                    
+                }
+              }
+
+              &__circles{
+                top: 50%;
+                transform: translateY(-50%);
+                right: 55px;
+            }
+              
+          } 
+
+        }
+    }
+
+    @media screen and (min-width: 1440px){
+        .header{
+
+            &__banner{
+                background-image: url(./about-hero-desktop.jpg);
+            }
+        }
+    }
+}
+
+.Careers{
+
+    .header{
+
+        &__banner{
+            background-image: url(./careers-location-hero-mobile.jpg);
+            padding: 60px 0;
+
+            &__text{
+
+                &__title{
+                    letter-spacing: -1.79px;
+                }
+
+                &__paragraph{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px){
+
+        .header{
+
+          &__banner{
+            background-image: url(./careers-locations-hero-tablet.jpg);
+            text-align: left;
+            padding: 72px 0;
+
+
+
+            &__text{
+                margin-left: 18.06%;
+                transform: translateX(-95px);
+
+                &__title{
+                    letter-spacing: -2.5px;
+                    
+                }
+              }
+
+              &__circles{
+                top: 50%;
+                transform: translateY(-50%);
+                right: 55px;
+            }
+              
+          } 
+
+        }
+    }
+
+    @media screen and (min-width: 1440px){
+        .header{
+
+            &__banner{
+                background-image: url(./careers-locations-hero-desktop.jpg);
+            }
+        }
+    }
+}
+
+.Locations{
+
+    .header{
+
+        &__banner{
+            background-image: url(./careers-location-hero-mobile.jpg);
+            padding: 60px 0;
+
+            &__text{
+
+                &__title{
+                    letter-spacing: -1.79px;
+                }
+
+                &__paragraph{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px){
+
+        .header{
+
+          &__banner{
+            background-image: url(./careers-locations-hero-tablet.jpg);
+            text-align: left;
+            padding: 72px 0;
+
+
+
+            &__text{
+                margin-left: 18.06%;
+                transform: translateX(-95px);
+
+                &__title{
+                    letter-spacing: -2.5px;
+                    
+                }
+              }
+
+              &__circles{
+                top: 50%;
+                transform: translateY(-50%);
+                right: 55px;
+            }
+              
+          } 
+
+        }
+    }
+
+    @media screen and (min-width: 1440px){
+        .header{
+
+            &__banner{
+                background-image: url(./careers-locations-hero-desktop.jpg);
+            }
+        }
+    }
+}

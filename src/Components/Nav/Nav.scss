@@ -1,0 +1,148 @@
+/* applied to body */
+.nav-open{
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden;
+}
+
+.header{
+
+    &__nav{
+        padding: 22px 32px;
+        height: 29px;
+        display: flex;
+        position: relative;
+
+        &__burger{
+            align-self: center;
+            cursor: pointer;
+
+            &--open{
+                content: url(./close.svg);
+            }
+        }
+
+        &__bar{
+
+            &__logo{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &__list{
+
+                &--closed{
+                    box-sizing: border-box;
+                    position: fixed;
+                    background: hsl(215, 14.3%, 23.3%);
+                    top: 73px;
+                    height: calc(100vh - 73px);
+                    width: 68.27%;
+                    z-index: 10;
+                    padding: 64px 0 0 32px;
+                    transition: left .5s ease-out;
+                    left: -68.27%;
+                }
+
+                &--open{
+                    box-sizing: border-box;
+                    position: fixed;
+                    background: hsl(215, 14.3%, 23.3%);
+                    top: 73px;
+                    height: calc(100vh - 73px);
+                    width: 68.27%;
+                    z-index: 10;
+                    padding: 64px 0 0 32px;
+                    transition: left .5s ease-out;
+                    left: 0;
+                    
+                }
+
+                &__item{
+                    font-family: 'Space Mono', monospace;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 1.389em;
+                    color: hsl(212, 40.5%, 92.7%);
+                    margin-bottom: 24px;
+
+                    a{
+                        color: hsl(212, 40.5%, 92.7%);
+                        text-decoration: none;
+
+                        &:hover{
+                           color: hsl(40, 97.2%, 57.8%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    .header{
+
+        &__nav{
+            padding: 22px 0;
+            height: auto;
+
+            &__burger{
+                display: none;
+            }
+
+            &__bar{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                margin: 0 auto;
+                margin-left: calc(18.06% - 95px);
+                margin-right: calc(18.06% - 95px);
+
+                &__logo{
+                    position: static;
+                    transform: none;
+                    margin-right: 58px;
+                }
+
+                &__list{
+
+                    &--open{
+                        left: -68.27%;
+                        width: 524px;
+                        transition: left .2s;
+
+                        .button--nav{
+                            width: 78%;
+                            max-width: 192px;
+                            position: absolute;
+                            bottom: 24px;
+                        }
+                    }
+
+                    &--closed{
+                        position: static;
+                        background: none;
+                        height: auto;
+                        width: initial;
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                    }
+
+                    &__item{
+                        display: inline;
+                        margin: 0 32px 0 0;
+
+                        a{
+                            color: #939caa;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

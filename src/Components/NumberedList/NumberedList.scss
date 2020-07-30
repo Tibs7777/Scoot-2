@@ -1,0 +1,101 @@
+.NumberedList{
+    text-align: center;
+    padding: 0 32px;
+    margin-bottom: 145px;
+
+    &__title{
+        font-family: 'Space Mono', monospace;
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -1.43px;
+        line-height: 1em;
+        color: hsl(216, 17%, 34.5%);
+        margin-bottom: 60px;
+    }
+
+    .ListItem{
+        margin-bottom: 40px;
+
+        &__img-container{
+            position: relative;
+            margin-bottom: 64px;
+
+            &__number{
+                font-family: 'Space Mono', monospace;
+                font-size: 24px;
+                letter-spacing: -1.07px;
+                line-height: 1.167em;
+                color: hsl(216, 17%, 34.5%);
+                height: 96px;
+                width: 96px;
+                border-radius: 50%;
+                position: absolute;
+                background: hsl(40, 97.2%, 57.8%);
+                transform: translate(-50%, -50%);
+                top: 100%;
+                left: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &__image{
+                border-radius: 50%;
+            }
+        }
+
+        &__text{
+
+            &__title{
+                font-family: 'Space Mono', monospace;
+                font-size: 24px;
+                font-weight: 700;
+                letter-spacing: -1.07px;
+                line-height: 1.167em;
+                color: hsl(216, 17%, 34.5%);
+                margin-bottom: 27px;
+            }
+
+            &__paragraph{
+                margin: 0 auto;
+                font-size: 15px;
+                line-height: 1.667em;
+                color: hsl(217, 11.9%, 62.2%);
+                max-width: 457px;
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .NumberedList{
+        padding: 0 calc(18.06% - 95px);
+        margin-bottom: 120px;
+
+        &__inner{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__title{
+            font-size: 48px;
+            letter-spacing: -2.14px;
+            margin-bottom: 100px;
+        }
+
+        .ListItem{
+            margin: 0;
+            &__img-container{
+                margin-bottom: 80px;
+            }
+
+            &__text{
+                max-width: 350px;
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,321 @@
+
+.InfoCard{
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0 32px;
+    overflow: hidden;
+    
+    &--a-left-down{
+
+        .InfoCard__image-container{
+            max-width: 741px;
+            &::after{
+                content: "";
+                display: block;
+                height: 151px;
+                max-height: 151px;
+                width: 741px;
+                background-image: url(./left-downward-arrow.svg);
+                background-repeat: no-repeat;
+                background-size: auto;
+                position: absolute;
+                top: 83%;
+                left: 0;
+                transform: translateY(-50%)
+
+            }
+        }
+    }
+
+    &--a-left-up{
+
+        .InfoCard__image-container{
+            max-width: 741px;
+            &::after{
+                content: "";
+                display: block;
+                height: 151px;
+                max-height: 151px;
+                width: 741px;
+                background-image: url(./left-upward-arrow.svg);
+                background-repeat: no-repeat;
+                background-size: auto;
+                position: absolute;
+                top: 76%;
+                left: 0;
+                transform: translateY(-50%)
+            }
+        }
+    }
+
+    &--a-left-down-short{
+
+        .InfoCard__image-container{
+            max-width: 452px;
+
+            &::after{
+                content: "";
+                display: block;
+                height: 151px;
+                max-height: 151px;
+                width: 741px;
+                background-image: url(./left-downward-arrow.svg);
+                background-repeat: no-repeat;
+                background-size: auto;
+                position: absolute;
+                top: 30%;
+                left: 40%;
+                transform: translateY(-50%)
+            }
+        }
+    }
+
+    &--a-right{
+
+        .InfoCard__image-container{
+            max-width: 452px;
+
+            &::after{
+                content: "";
+                display: block;
+                height: 151px;
+                max-height: 151px;
+                width: 452px;
+                background-image: url(./right-arrow.svg);
+                background-repeat: no-repeat;
+                background-size: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateX(-50%);
+            }
+
+
+        }
+    }
+
+    &__image-container{
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 56px;
+        width: 100%;
+
+
+        &__image{
+            border-radius: 50%;
+            width: 100%;
+            max-width: 445px;
+
+        }
+    }
+
+    &__text{
+        margin: 0 auto;
+
+        &> a:last-of-type{
+            margin-top: 32px;
+        }
+
+        &__title{
+            font-family: 'Space Mono', monospace;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -1.43px;
+            line-height: 1em;
+            color: hsl(216, 17%, 34.5%);
+        }
+
+        &__paragraph{
+            font-size: 15px;
+            line-height: 1.667em;
+            color: hsl(217, 11.9%, 62.2%);
+            margin: 32px 0 0 0;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .InfoCard{
+        padding: 0 calc(18.06% - 95px);
+        position: relative;
+
+        &::before{
+            content: "";
+            width: 445px;
+            height: 445px;
+            background-image: url(./circle.svg);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-70%);
+        }
+
+        &--a-left-down{
+
+            .InfoCard__image-container{
+                max-width: 741px;
+                &::after{
+                    top: 371px;
+                    left: initial;
+                    right: 0;
+                }
+            }
+        }
+
+        &--a-left-up{
+
+            .InfoCard__image-container{
+                max-width: 741px;
+                &::after{
+                    top: 340px;
+                    left: initial;
+                    right: 0;
+                }
+            }
+        }
+
+        &--a-left-down-short{
+
+            .InfoCard__image-container{
+                max-width: 452px;
+                position: relative;
+                &::after{
+                    left: 53%;
+                }
+            }
+        }
+
+        &--a-right{
+
+            .InfoCard__image-container{
+                max-width: 452px;
+    
+                &::after{
+                    left: 15.5%;
+                }
+    
+    
+            }
+        }
+
+        &--reverse{
+
+            &::before{
+                left: initial;
+                right: 0;
+                transform: translateX(70%);
+            }
+        }
+
+        &__image-container{
+            position: static;
+        }
+
+        &__text{
+
+            &> a:last-of-type{
+                margin-top: 40px;
+            }
+
+            &__title{
+                margin: 0 auto;;
+                font-size: 48px;
+                letter-spacing: -2.14px;
+                width: 457px;
+            }
+
+            &__paragraph{
+                margin: 40px auto 0 auto;
+                max-width: 900px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px){
+
+    .InfoCard{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--reverse{
+            flex-direction: row-reverse;
+        }
+
+        &--a-left-down{
+            
+            .InfoCard__image-container{
+                max-width: 445px;
+                margin: 0;
+                &::after{
+
+                }
+            }
+        }
+
+        &--a-left-up{
+            
+            .InfoCard__image-container{
+                max-width: 445px;
+                margin: 0;
+                &::after{
+
+                }
+            }
+        }
+
+        &--a-left-down-short{
+            
+            .InfoCard__image-container{
+                max-width: 445px;
+                margin: 0;
+                &::after{
+
+                }
+            }
+        }
+
+        &--a-right{
+            
+            .InfoCard__image-container{
+                max-width: 445px;
+                margin: 0;
+                &::after{
+                    left: -3%;
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        &--image-container{
+            
+        }
+
+        &__text{
+            text-align: left;
+            width: 40.1%;
+            margin: 0;
+
+            &> a:last-of-type{
+                margin-top: 40px;
+            }
+
+
+            &__title{
+                margin: 0;
+                max-width: none;
+                width: initial;
+            }
+
+            &__paragraph{
+                max-width: none;
+                margin-top: 24px;
+
+            }
+        }
+    }
+
+}

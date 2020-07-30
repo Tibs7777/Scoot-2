@@ -1,0 +1,44 @@
+.button{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 180px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.667em;
+    text-decoration: none;
+    color: #FFF;
+    background: hsl(40, 97.2%, 57.8%);
+    padding: 11px 0;
+    text-align: center;
+    border: 3px solid hsl(40, 97.2%, 57.8%);
+    transition: background .2s ease-in-out, color .2s ease-in-out;
+
+    &--nav{
+        width: 78%;
+        max-width: 192px;
+        position: absolute;
+        bottom: 24px;
+
+
+    }
+
+    &:hover{
+        background: transparent;
+        color: hsl(40, 97.2%, 57.8%);
+
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    .button{
+
+        &--nav{
+            width: 180px;
+            display: block;
+            position: static;
+            margin-left: auto;
+        }
+    }
+}

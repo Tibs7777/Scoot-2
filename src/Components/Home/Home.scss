@@ -1,0 +1,34 @@
+
+.Home .InfoCards > :first-child {
+        margin-top: 83px;
+    }
+
+.Home .InfoCards .InfoCard {
+    margin-bottom: 120px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .Home .InfoCards > :first-child {
+        margin-top: 100px;
+    }
+
+    .Home .InfoCards .InfoCard {
+        margin-bottom: 104px;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .Home .InfoCards > :not(:last-child) {
+        margin-bottom: 160px;
+    }
+
+    .Home .InfoCards{
+        margin: 200px 0;
+    }
+}
+
+
+
+

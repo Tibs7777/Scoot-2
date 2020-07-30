@@ -1,0 +1,75 @@
+.DownloadBanner{
+    padding: 88px 32px;
+    background: hsl(216, 17%, 34.5%);
+    background-image: url(./semi-circles.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right -200px;
+
+    &__title{
+        text-align: center;
+        color: #FFF;
+        font-family: 'Space Mono', monospace;
+        font-weight: 700;
+        font-size: 32px;
+        letter-spacing: -1.43px;
+        line-height: 1em;
+        margin-bottom: 40px;
+    }
+
+    &__buttons{
+        text-align: center;
+
+        &__app{
+            width: 113.57px;
+            margin-right: 6px;
+            cursor: pointer;
+            
+        }
+
+        &__google{
+            width: 130px;
+            margin-left: 6px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    .DownloadBanner{
+        padding: 62px 155px;
+
+        &__title{
+            font-size: 48px;
+            letter-spacing: -2.14px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .DownloadBanner{
+        padding: 102px calc(18.06% - 95px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__title{
+            text-align: left;
+            width: 415px;
+            margin: 0;
+
+        }
+
+        &__buttons{
+
+            &__app{
+                margin-right: 9px;
+                width: initial;
+            }
+
+            &__google{
+                width: initial;
+                margin-left: 9px;
+            }
+        }
+    }
+}
