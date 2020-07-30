@@ -18,7 +18,8 @@ constructor(props){
         }
 
         return(
-        <a className={className} href={this.props.href ? this.props.href : '#'} onClick={this.props.handleClick ? this.props.handleClick : null}>{this.props.text}</a>
+        <a className={className} href={this.props.href ? this.props.href : '#'} 
+        onClick={window.screen.width < 768 ? this.props.handleClick ? this.props.handleClick : null : null}>{this.props.text}</a>
         )
     }
 

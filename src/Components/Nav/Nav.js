@@ -26,14 +26,14 @@ class Nav extends React.Component{
             document.body.classList.add('nav-open')
             this.setState({nav: 'open'})
             window.scrollTo(0, 0);
-            console.log('opening')
+            console.log(window.screen.width)
         } else {
             document.querySelector('.header__nav__bar__list').classList = "header__nav__bar__list header__nav__bar__list--closed";
             document.querySelector('.header__nav__burger').classList = "header__nav__burger";
             document.querySelector('.header__banner').classList = "header__banner"
             document.body.classList.remove('nav-open')
             this.setState({nav: 'closed'})
-            console.log('closing')
+            console.log(window.screen.width)
         }
     }
 
@@ -61,7 +61,7 @@ class Nav extends React.Component{
                     <li className="header__nav__bar__list__item"><a href="/about">About</a></li>
                     <li className="header__nav__bar__list__item"><a href="/locations">Location</a></li>
                     <li className="header__nav__bar__list__item"><a href="/Careers">Careers</a></li>
-                    <Button nav={true} text={'Get Scootin'} href={'#DownloadBanner'} handleClick={this.handleClick}/>
+                    <Button nav={true} text={'Get Scootin'} href='#DownloadBanner' handleClick={this.handleClick}/>
                 </ul>
             </div>
         </div>
